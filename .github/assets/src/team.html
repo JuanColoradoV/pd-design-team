@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="brand.css">
+<style>
+html,body{width:1280px;height:790px}
+.display{letter-spacing:-.025em;line-height:1.03}
+.k{font:600 17px "JetBrains Mono";letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+h2{position:absolute;left:56px;top:44px;font-size:60px}
+.lede{position:absolute;left:58px;top:120px;font:400 25px "Bricolage Grotesque";color:var(--dim)}
+.lede b{color:var(--ink);font-weight:600}
+.lead{position:absolute;right:56px;top:50px;display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--bg);
+ font:800 24px "JetBrains Mono";padding:16px 22px;border-radius:10px}
+.lead i{width:12px;height:12px;border-radius:50%;background:var(--sig)}
+.cols{position:absolute;left:56px;right:56px;top:188px;display:grid;grid-template-columns:1fr 1.3fr 1fr .9fr;gap:20px}
+.col{border-top:3px solid var(--line);padding-top:16px}
+.col .k{margin-bottom:16px}
+.n{display:inline-block;font:600 21px "JetBrains Mono";border:2px solid #3A3933;border-radius:9px;padding:8px 13px;margin:0 8px 10px 0;color:var(--dim);background:var(--panel)}
+.n.on{border-color:var(--sig);color:var(--ink)}
+.route{position:absolute;left:56px;right:56px;top:462px}
+.route .k{margin-bottom:14px}
+.route .k b{color:var(--sig)}
+.strip{display:flex;align-items:center}
+.s{font:800 21px "JetBrains Mono";background:var(--sig);color:var(--bg);border-radius:9px;padding:10px 13px;white-space:nowrap}
+.c{flex:1;height:2px;background:var(--sig);min-width:14px;position:relative}
+.c::after{content:"";position:absolute;right:-1px;top:-5px;border:6px solid transparent;border-left:8px solid var(--sig);border-right:0}
+.fork{display:flex;flex-direction:column;gap:8px;border-left:2px solid var(--sig);border-right:2px solid var(--sig);padding:0 10px}
+.note{margin-top:12px;font:400 18px "JetBrains Mono";color:var(--dim)}
+.found{position:absolute;left:56px;right:56px;bottom:44px;border:2px solid #3A3933;border-radius:12px;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;background:var(--panel)}
+.found b{font:800 21px "JetBrains Mono";color:var(--ink)}
+.found span{font:400 21px "Bricolage Grotesque";color:var(--dim)}
+.found span em{font-style:normal;color:var(--ink)}
+</style></head><body>
+<h2 class="display">The team follows the task.</h2>
+<div class="lede">The lead plans the <b>smallest team</b> for each job, and waits for your OK.</div>
+<div class="lead"><i></i>pd-design-lead</div>
+
+<div class="cols">
+ <div class="col"><div class="k">Understand</div><span class="n">research</span><span class="n">architecture</span><span class="n on">flows</span></div>
+ <div class="col"><div class="k">Design</div><span class="n on">ux-design</span><span class="n on">writing</span><span class="n on">visual</span><span class="n on">design-system</span><span class="n">responsive</span></div>
+ <div class="col"><div class="k">Build &amp; verify</div><span class="n on">mocks</span><span class="n">prototyping</span><span class="n on">qa</span></div>
+ <div class="col"><div class="k">Ship &amp; learn</div><span class="n on">handoff</span><span class="n">metrics</span><span class="n">system-ops ↺</span></div>
+</div>
+
+<div class="route">
+ <div class="k">One route · <b>a new flow and its screens</b></div>
+ <div class="strip">
+  <span class="s">flows</span><span class="c"></span><span class="s">ux-design</span><span class="c"></span>
+  <span class="fork"><span class="s">writing</span><span class="s">visual</span></span><span class="c"></span>
+  <span class="s">design-system</span><span class="c"></span><span class="s">mocks</span><span class="c"></span><span class="s">qa</span><span class="c"></span><span class="s">handoff</span>
+ </div>
+ <div class="note">research reused or assumptions agreed · a copy fix needs one specialist</div>
+</div>
+
+<div class="found"><b>pd-foundations</b><span><em>your real design system</em> · every state · WCAG 2.2 AA floor · files in docs/design/</span></div>
+</body></html>

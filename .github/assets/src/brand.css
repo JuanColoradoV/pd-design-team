@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600;800&display=block");
+:root{--bg:#0C0C0A;--panel:#141411;--ink:#F3F0E8;--dim:#9A968B;--line:#2C2B26;--sig:#FF5A26;--ok:#C8F560;--red:#FF3E70;--paper:#F1EDE2;--pink:#121210}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;position:relative;overflow:hidden;
+ background-image:radial-gradient(circle,#262520 1.3px,transparent 1.5px);background-size:32px 32px;background-position:16px 16px}
+.mono{font-family:"JetBrains Mono",monospace}
+.display{font-weight:800;letter-spacing:-.045em;line-height:.88}
+.sig{color:var(--sig)}.ok{color:var(--ok)}.dim{color:var(--dim)}
+/* selection frame */
+.sel{position:absolute;border:2px solid var(--sig)}
+.sel>.h{position:absolute;width:12px;height:12px;background:var(--bg);border:2px solid var(--sig)}
+.sel>.h.tl{left:-7px;top:-7px}.sel>.h.tr{right:-7px;top:-7px}.sel>.h.bl{left:-7px;bottom:-7px}.sel>.h.br{right:-7px;bottom:-7px}
+.sel>.name{position:absolute;left:-2px;top:-34px;font:600 17px "JetBrains Mono";color:var(--sig);white-space:nowrap}
+.sel>.name b{background:var(--sig);color:var(--bg);padding:3px 8px;margin-right:10px;font-weight:800}
+/* redline */
+.tag{position:absolute;font:800 18px "JetBrains Mono";background:var(--red);color:#0B0B09;padding:3px 8px;border-radius:4px;white-space:nowrap}
+.rv{position:absolute;width:2px;background:var(--red)}
+.rv::before,.rv::after{content:"";position:absolute;left:-5px;width:12px;height:2px;background:var(--red)}
+.rv::before{top:0}.rv::after{bottom:0}
+.rh{position:absolute;height:2px;background:var(--red)}
+.rh::before,.rh::after{content:"";position:absolute;top:-5px;height:12px;width:2px;background:var(--red)}
+.rh::before{left:0}.rh::after{right:0}
+/* receipt */
+.receipt{position:absolute;background:var(--paper);color:#151512;font-family:"JetBrains Mono",monospace;
+ --z:14px;-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(2*var(--z)) 100%;
+}
+.receipt .row{display:flex;justify-content:space-between;gap:12px}
+.receipt hr{border:0;border-top:2px dashed #B9B3A4;margin:14px 0}
+.chk{color:#3E7A00;font-weight:800}
+.nt{color:#C93A0B;font-weight:800}

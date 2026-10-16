@@ -1,6 +1,6 @@
 # pd-design-team
 
-![pd-design-team — a design team for your AI agent](.github/assets/social-preview.png)
+![pd-design-team: design with receipts. A design team for your AI agent, shown next to a QA receipt from the worked example](.github/assets/hero.png)
 
 **[English](#english) · [Español](#español)**
 
@@ -30,11 +30,7 @@ team. It asks what it needs, proposes a plan, and waits for your OK. Then it pro
 
 You only run the parts you need. A copy fix goes to one specialist; a new feature might use six.
 
-```
-you ──▶ pd-design-lead ──▶ picks the smallest set of specialists for the job
-                              research · architecture · flows · design · writing · visual
-                              design-system · mocks · prototyping · responsive · qa · handoff · metrics
-```
+![The team follows the task: pd-design-lead picks the smallest set of specialists, for example flows, ux-design, writing and visual in parallel, design-system, mocks, qa, handoff; all on top of pd-foundations](.github/assets/team.png)
 
 ### What you need
 
@@ -50,7 +46,7 @@ assumptions (no invented data), flows, screen specs with every state, copy, visu
 mapping, a coded hi-fi mock built only from design tokens, a QA report with real findings, the
 developer handoff, and the retro's learnings.
 
-![Coded mock of the Pantry week planner, produced by pd-mocks](.github/assets/example-mock.png)
+![The worked example: the coded week-planner mock next to the status of each artifact in docs/design/](.github/assets/example.png)
 
 ## Why it's different
 
@@ -71,6 +67,8 @@ developer handoff, and the retro's learnings.
   included). Regulatory checks run only when the project declares them.
 - **Built to be tested against models.** A 51-scenario behavioral eval suite lets you check whether a
   new model actually follows the contract; results go in `evals/results/`.
+
+![The happy path is one state: populated, loading, empty and error states of the example's week planner; loading and error were specified but not built or audited](.github/assets/states.png)
 
 ## Install
 
@@ -238,6 +236,8 @@ equipo con un agente de IA, sobre una app de recetas ficticia: el plan, la inves
 honestidad como supuestos (sin datos inventados), flujos, specs de pantallas con todos sus estados,
 textos, mapeo visual y de componentes, un mock de alta fidelidad en código hecho solo con tokens, un
 reporte de QA con hallazgos reales, el handoff para desarrollo y las lecciones de la retro.
+
+![El ejemplo: el mock en código del planificador semanal junto al estado de cada documento en docs/design/](.github/assets/example.png)
 
 ### Qué lo hace distinto
 

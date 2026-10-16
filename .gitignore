@@ -3,3 +3,4 @@ dist/
 .denylist
 evals/results/*.local.md
 __pycache__/
+.github/assets/src/.build/

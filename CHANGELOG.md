@@ -7,7 +7,9 @@
 - **Fixes found by running the example:** `plan` added as an artifact discipline; QA sign-off states
   defined (`pass` / `pass with conditions` / `fail`) and the handoff gate tied to them; the design-system
   backlog entry now follows the template; the code adapter states its audit table format.
-- **Social preview image** and README hero (`.github/assets/`).
+- **README visuals** ("Design with receipts"): hero and social preview, team route, every-state, and worked
+  example images, plus a new plugin icon. Every number on them comes from the example's artifacts. Sources and
+  `render.sh` live in `.github/assets/src/`.
 - **Community files:** code of conduct, security policy, accessibility statement, issue templates (skill
   behavior, tool adapter, eval result, accessibility barrier), and a pull request template.
 

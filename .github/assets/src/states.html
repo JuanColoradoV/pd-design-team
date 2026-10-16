@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="../../../examples/pantry-meal-planner/src/tokens/tokens.css"><link rel="stylesheet" href="../../../examples/pantry-meal-planner/src/components/components.css">
+<style>
+html,body{width:1280px;height:800px}
+.display{letter-spacing:-.025em;line-height:1.03}
+h2{position:absolute;left:56px;top:44px;font-size:60px;color:var(--ink)}
+.lede{position:absolute;left:58px;top:124px;font:400 24px "Bricolage Grotesque";color:var(--dim)}
+.lede b{color:var(--ink);font-weight:600}
+.row{position:absolute;left:56px;right:56px;top:196px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.lab{display:flex;justify-content:space-between;align-items:baseline;font:800 20px "JetBrains Mono";color:var(--ink);margin-bottom:12px}
+.lab span{font-weight:400;color:var(--dim);font-size:18px}
+.phone{height:360px;border-radius:22px;border:2px solid #3A3933;overflow:hidden;background:var(--color-surface-page);color:var(--color-text-primary);
+ font-family:"Bricolage Grotesque",sans-serif;zoom:1.12}
+.phone .in{padding:20px;display:grid;gap:12px;font-family:"Bricolage Grotesque",sans-serif}
+.phone *{font-family:"Bricolage Grotesque",sans-serif!important}
+.ph{font:700 24px/1.15 "Bricolage Grotesque";margin:0}
+.dt{font-size:14px;color:var(--color-text-secondary)}
+.card{display:grid;gap:8px}
+.card h3{font:600 15px/1.3 x;margin:0}
+.rn{font-weight:600;font-size:15px;margin:0}.mt{font-size:13px;color:var(--color-text-secondary);margin:0}
+.acts{display:flex;gap:6px}
+.sk{height:12px;border-radius:6px;background:var(--color-surface-sunken)}
+.empty-state{padding:16px!important}
+.tagrow{margin-top:16px;display:flex;flex-wrap:nowrap;gap:8px}
+.t{font:600 16px "JetBrains Mono";padding:4px 9px;border-radius:5px;background:var(--red);color:#fff}
+.t.gap{background:transparent;border:2px solid var(--sig);color:var(--sig)}
+.foot{position:absolute;left:56px;right:56px;bottom:34px;font:400 18px/1.6 "JetBrains Mono";color:var(--dim)}
+.foot b{color:var(--ink);font-weight:600}
+</style></head><body>
+<h2 class="display">The happy path is one state.</h2>
+<div class="lede"><b>pd-ux-design</b> specs every state before anyone builds. Four from the example.</div>
+
+<div class="row">
+ <div><div class="lab">populated <span>built</span></div>
+  <div class="phone"><div class="in">
+   <p class="ph">This week</p><p class="dt">Oct 19 – 25, 2026</p>
+   <div class="card"><h3>Monday 19</h3><div><p class="rn">Lemon chickpea orzo</p><p class="mt">4 servings · 35 min</p></div>
+    <div class="acts"><button class="btn" data-kind="secondary" data-size="sm">Change</button><button class="btn" data-kind="secondary" data-size="sm">Remove</button></div></div>
+   <div class="card"><h3>Saturday 24</h3><p class="mt">Nothing planned</p><div><button class="btn" data-kind="ghost" data-size="md">Add dinner</button></div></div>
+  </div></div>
+  <div class="tagrow"><span class="t">Card</span><span class="t">Button sm</span></div></div>
+
+ <div><div class="lab">loading <span>spec only</span></div>
+  <div class="phone"><div class="in">
+   <p class="ph">This week</p><p class="dt">Loading your week</p>
+   <div class="card"><p class="mt">Loading</p></div>
+   <div class="card"><p class="mt">Loading</p></div>
+   <div class="card"><p class="mt">Loading</p></div>
+  </div></div>
+  <div class="tagrow"><span class="t gap">gap logged: Skeleton</span></div></div>
+
+ <div><div class="lab">empty <span>built</span></div>
+  <div class="phone"><div class="in">
+   <p class="ph">This week</p><p class="dt">Oct 19 – 25, 2026</p>
+   <div class="empty-state"><h3>No dinners planned yet</h3><p>Pick a few saved recipes and Pantry will turn them into a shopping list.</p>
+    <div><button class="btn" data-kind="primary" data-size="md">Browse saved recipes</button></div></div>
+  </div></div>
+  <div class="tagrow"><span class="t">EmptyState</span></div></div>
+
+ <div><div class="lab">error <span>spec only</span></div>
+  <div class="phone"><div class="in">
+   <p class="ph">This week</p><p class="dt">Oct 19 – 25, 2026</p>
+   <div class="empty-state" data-tone="error"><h3>Couldn't load your plan</h3><p>Something went wrong on our side. Your saved recipes are safe.</p>
+    <div><button class="btn" data-kind="secondary" data-size="md">Try again</button></div></div>
+  </div></div>
+  <div class="tagrow"><span class="t">EmptyState · error</span></div></div>
+</div>
+
+<div class="foot">excerpts redrawn from the spec · <b>loading and error were specified, not built or audited</b> (QA F-1)<br>also specified: <b>offline</b> · <b>recipe deleted</b> · <b>no saved recipes</b></div>
+</body></html>

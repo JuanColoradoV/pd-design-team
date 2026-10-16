@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="brand.css">
+<style>
+html,body{width:1280px;height:830px}
+.display{letter-spacing:-.025em;line-height:1.03}
+h2{position:absolute;left:56px;top:44px;font-size:60px}
+.lede{position:absolute;left:58px;top:124px;font:400 24px "Bricolage Grotesque";color:var(--dim)}
+.lede b{color:var(--ink);font-weight:600}
+.win{position:absolute;left:56px;top:196px;width:744px;height:560px;border:2px solid #3A3933;border-radius:14px;overflow:hidden;background:#faf7f2}
+.bar{height:44px;background:#1A1A17;display:flex;align-items:center;gap:8px;padding:0 16px;border-bottom:2px solid #3A3933}
+.bar i{width:12px;height:12px;border-radius:50%;background:#3A3933}
+.bar span{margin-left:14px;font:400 16px "JetBrains Mono";color:var(--dim)}
+.vp{overflow:hidden}.shot{width:100%;display:block}
+.files{position:absolute;left:836px;right:56px;top:196px}
+.files .k{font:600 17px "JetBrains Mono";letter-spacing:.14em;text-transform:uppercase;color:var(--dim);border-bottom:3px solid var(--line);padding-bottom:12px;margin-bottom:6px}
+.m{padding:10px 0 12px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;gap:8px}.m b{font:800 21px "JetBrains Mono"}
+.f{display:flex;justify-content:space-between;align-items:center;font:600 19px "JetBrains Mono";padding:3px 0;border-bottom:1px solid var(--line)}
+.p{font:600 16px "JetBrains Mono";padding:3px 8px;border-radius:5px;border:2px solid #4A4942;color:var(--dim)}
+.p.a{border-color:var(--ok);color:var(--ok)}
+.p.s{border-color:var(--sig);color:var(--sig)}
+.f.side{color:var(--dim)}
+.foot{position:absolute;left:56px;right:56px;bottom:30px;display:flex;justify-content:space-between;font:400 20px "JetBrains Mono";color:var(--dim)}
+.foot b{color:var(--ink);font-weight:600}
+.tag{z-index:2}
+</style></head><body>
+<h2 class="display">One brief in. A whole effort out.</h2>
+<div class="lede">The worked example: a <b>fictional meal planner</b> (invented data), run through the team from plan to handoff.</div>
+
+<div class="win"><div class="bar"><i></i><i></i><i></i><span>mocks/week-planner.html · built only from tokens</span></div>
+ <div class="vp"><img class="shot" src=".build/mock-week.png"></div></div>
+<div class="tag" style="left:470px;top:736px">text contrast 4.71–14.97 : 1</div>
+
+<div class="files">
+ <div class="k">docs/design/</div>
+ <div class="m"><b>plan</b><span class="p a">approved</span></div>
+ <div class="m"><b>research</b><span class="p">draft · assumptions only</span></div>
+ <div class="m"><b>5 specs</b><span class="p">in review · flows → components</span></div>
+ <div class="m"><b>mocks</b><span class="p">in review · 0 off-token colors</span></div>
+ <div class="m"><b>qa</b><span class="p s">pass with conditions · 5 medium open</span></div>
+ <div class="m"><b>handoff</b><span class="p">draft · spec v1.0</span></div>
+</div>
+
+<div class="foot"><div>open it: <b>examples/pantry-meal-planner</b></div><div></div></div>
+</body></html>
