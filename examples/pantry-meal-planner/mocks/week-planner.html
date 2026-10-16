@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pantry: plan the week (mock)</title>
+<!-- FICTIONAL product. Hi-fi mock for the pd-* worked example. Tokens and components are the real files in ../src/. -->
+<link rel="stylesheet" href="../src/tokens/tokens.css">
+<link rel="stylesheet" href="../src/components/components.css">
+<style>
+  body { margin: 0; background: var(--color-surface-page); color: var(--color-text-primary); font: var(--role-body-default); }
+  .skip { color: var(--color-text-primary); position: absolute; inset-inline-start: var(--space-2); inset-block-start: calc(var(--size-target-comfortable) * -2); padding: var(--space-3) var(--space-4); background: var(--color-surface-card); border-radius: var(--radius-md); z-index: 1; }
+  .skip:focus { inset-block-start: var(--space-2); }
+  main { max-inline-size: var(--size-content-max); margin-inline: auto; padding: var(--space-4); display: grid; gap: var(--space-7); }
+  h1 { font: var(--role-display-default); margin: 0; }
+  h2 { font: var(--role-display-default); margin: 0; }
+  h3 { font: var(--role-heading-small); margin: 0; }
+  p { margin: 0; }
+  .mock-note { color: var(--color-text-secondary); font: var(--role-caption-default); max-inline-size: var(--size-measure); }
+  .screen { display: grid; gap: var(--space-5); }
+  .mock-label { font: var(--role-label-default); color: var(--color-text-secondary); }
+  .screen-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); }
+  .screen-head p { color: var(--color-text-secondary); }
+  .week-nav { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .days { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+  .day { display: grid; gap: var(--space-3); align-content: start; }
+  .day h3 { font: var(--role-heading-small); }
+  .recipe-name { font: var(--role-body-strong); }
+  .meta { font: var(--role-caption-default); color: var(--color-text-secondary); }
+  .day-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+  .notice { padding: var(--space-4); background: var(--color-surface-accent-subtle); border: var(--border-width-thin) solid var(--color-border-default); border-radius: var(--radius-md); display: grid; gap: var(--space-2); max-inline-size: var(--size-measure); }
+  .notice strong { font: var(--role-body-strong); }
+  .notice ul { margin: 0; padding-inline-start: var(--space-5); }
+  .field { display: grid; gap: var(--space-2); max-inline-size: var(--size-measure); }
+  .field label { font: var(--role-label-default); }
+  .field input { min-block-size: var(--size-target-comfortable); padding-inline: var(--space-3); font: var(--role-body-default); color: var(--color-text-primary); background: var(--color-surface-card); border: var(--border-width-thin) solid var(--color-border-default); border-radius: var(--radius-md); }
+  .recipes { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); max-inline-size: var(--size-measure); }
+  .recipe-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); }
+  .group { display: grid; gap: var(--space-1); }
+  .group ul { list-style: none; margin: 0; padding: 0; }
+  .list-body { display: grid; gap: var(--space-5); max-inline-size: var(--size-measure); }
+  .tabs { max-inline-size: var(--size-measure); }
+  @media (min-width: 48em) {
+    main { padding: var(--space-5); }
+    .days { grid-template-columns: repeat(auto-fit, minmax(var(--size-day-min), 1fr)); }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#week">Skip to the week</a>
+<main id="main">
+  <header>
+    <h1>Pantry: plan the week</h1>
+    <p class="mock-note">Mock for a fictional app. Four screens shown on one page: week planner (populated), week planner (empty), add-recipe-to-day picker (replace case), shopping list (partial case). Sample data is invented.</p>
+  </header>
+
+  <!-- SCREEN 1: Week planner, populated -->
+  <section class="screen" id="week" aria-labelledby="week-title">
+    <p class="mock-label">Screen 1 · Week planner · populated</p>
+    <div class="screen-head">
+      <div>
+        <h2 id="week-title">This week</h2>
+        <p>Oct 19 – 25, 2026</p>
+      </div>
+      <div class="week-nav">
+        <button class="btn" type="button" data-kind="secondary" data-size="md">Previous week</button>
+        <button class="btn" type="button" data-kind="secondary" data-size="md">Next week</button>
+      </div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Plan sections">
+      <button class="tab" role="tab" id="tab-plan-1" aria-selected="true" aria-controls="week" type="button">Plan</button>
+      <button class="tab" role="tab" id="tab-list-1" aria-selected="false" aria-controls="shopping" type="button">Shopping list</button>
+    </div>
+    <ol class="days">
+      <li class="card day" aria-labelledby="d-mon">
+        <h3 id="d-mon">Monday 19</h3>
+        <div><p class="recipe-name">Lemon chickpea orzo</p><p class="meta">4 servings · 35 min</p></div>
+        <div class="day-actions">
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Change Monday's dinner">Change</button>
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Remove Monday's dinner">Remove</button>
+        </div>
+      </li>
+      <li class="card day" aria-labelledby="d-tue">
+        <h3 id="d-tue">Tuesday 20</h3>
+        <div><p class="recipe-name">Sheet-pan chicken and potatoes</p><p class="meta">4 servings · 50 min</p></div>
+        <div class="day-actions">
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Change Tuesday's dinner">Change</button>
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Remove Tuesday's dinner">Remove</button>
+        </div>
+      </li>
+      <li class="card day" aria-labelledby="d-wed">
+        <h3 id="d-wed">Wednesday 21</h3>
+        <div><p class="recipe-name">Mushroom stroganoff</p><p class="meta">4 servings · 40 min</p></div>
+        <div class="day-actions">
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Change Wednesday's dinner">Change</button>
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Remove Wednesday's dinner">Remove</button>
+        </div>
+      </li>
+      <li class="card day" aria-labelledby="d-thu">
+        <h3 id="d-thu">Thursday 22</h3>
+        <div><p class="recipe-name">Black bean tacos</p><p class="meta">4 servings · 25 min</p></div>
+        <div class="day-actions">
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Change Thursday's dinner">Change</button>
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Remove Thursday's dinner">Remove</button>
+        </div>
+      </li>
+      <li class="card day" aria-labelledby="d-fri">
+        <h3 id="d-fri">Friday 23</h3>
+        <div><p class="recipe-name">Miso salmon bowls</p><p class="meta">4 servings · 30 min</p></div>
+        <div class="day-actions">
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Change Friday's dinner">Change</button>
+          <button class="btn" type="button" data-kind="secondary" data-size="sm" aria-label="Remove Friday's dinner">Remove</button>
+        </div>
+      </li>
+      <li class="card day" aria-labelledby="d-sat">
+        <h3 id="d-sat">Saturday 24</h3>
+        <p class="meta">Nothing planned</p>
+        <div class="day-actions">
+          <button class="btn" type="button" data-kind="ghost" data-size="md" aria-label="Add dinner for Saturday">Add dinner</button>
+        </div>
+      </li>
+      <li class="card day" aria-labelledby="d-sun">
+        <h3 id="d-sun">Sunday 25</h3>
+        <p class="meta">Nothing planned</p>
+        <div class="day-actions">
+          <button class="btn" type="button" data-kind="ghost" data-size="md" aria-label="Add dinner for Sunday">Add dinner</button>
+        </div>
+      </li>
+    </ol>
+    <div class="actions">
+      <button class="btn" type="button" data-kind="primary" data-size="md">View shopping list</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 1: Week planner, empty -->
+  <section class="screen" aria-labelledby="empty-title">
+    <p class="mock-label">Screen 1 · Week planner · empty state (first use)</p>
+    <h2 id="empty-title">This week</h2>
+    <div class="empty-state">
+      <h3>No dinners planned yet</h3>
+      <p>Pick a few saved recipes and Pantry will turn them into a shopping list.</p>
+      <button class="btn" type="button" data-kind="primary" data-size="md">Browse saved recipes</button>
+    </div>
+  </section>
+
+  <!-- SCREEN 2: Picker, replace case -->
+  <section class="screen" aria-labelledby="picker-title">
+    <p class="mock-label">Screen 2 · Add-recipe-to-day picker · populated, day already has a dinner</p>
+    <div class="screen-head">
+      <h2 id="picker-title">Add dinner for Wednesday</h2>
+      <button class="btn" type="button" data-kind="secondary" data-size="md">Back to week</button>
+    </div>
+    <div class="notice" role="status">
+      <strong>Wednesday already has a dinner.</strong>
+      <span>Wednesday already has Mushroom stroganoff. Choosing another recipe replaces it.</span>
+    </div>
+    <div class="field">
+      <label for="recipe-search">Search saved recipes</label>
+      <input id="recipe-search" type="search" autocomplete="off">
+      <p class="meta" role="status">6 recipes</p>
+    </div>
+    <ul class="recipes">
+      <li class="card recipe-row">
+        <div><p class="recipe-name">Black bean tacos</p><p class="meta">4 servings · 25 min · Also on Thursday</p></div>
+        <button class="btn" type="button" data-kind="secondary" data-size="md" aria-label="Choose Black bean tacos for Wednesday">Choose</button>
+      </li>
+      <li class="card recipe-row">
+        <div><p class="recipe-name">Tomato soup and grilled cheese</p><p class="meta">4 servings · 30 min</p></div>
+        <button class="btn" type="button" data-kind="secondary" data-size="md" aria-label="Choose Tomato soup and grilled cheese for Wednesday">Choose</button>
+      </li>
+      <li class="card recipe-row">
+        <div><p class="recipe-name">Coconut red lentil curry</p><p class="meta">4 servings · 35 min</p></div>
+        <div class="day-actions">
+          <button class="btn" type="button" data-kind="primary" data-size="md" aria-label="Replace Mushroom stroganoff with Coconut red lentil curry">Replace</button>
+          <button class="btn" type="button" data-kind="secondary" data-size="md">Keep current</button>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- SCREEN 3: Shopping list, partial -->
+  <section class="screen" id="shopping" aria-labelledby="list-title">
+    <p class="mock-label">Screen 3 · Shopping list · partial (2 ingredients not parsed)</p>
+    <div class="screen-head">
+      <div>
+        <h2 id="list-title">Shopping list</h2>
+        <p role="status">15 items for 5 dinners · 3 checked</p>
+      </div>
+      <button class="btn" type="button" data-kind="secondary" data-size="md">Clear checked items</button>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Plan sections">
+      <button class="tab" role="tab" id="tab-plan-2" aria-selected="false" aria-controls="week" type="button">Plan</button>
+      <button class="tab" role="tab" id="tab-list-2" aria-selected="true" aria-controls="shopping" type="button">Shopping list</button>
+    </div>
+    <div class="notice">
+      <strong>2 ingredients couldn't be added</strong>
+      <span>Pantry couldn't read these lines. Check them in the recipe.</span>
+      <ul><li>Miso salmon bowls: "a handful of herbs", "soy to taste"</li></ul>
+    </div>
+    <div class="list-body">
+      <section class="group" aria-labelledby="g-produce">
+        <h3 id="g-produce">Produce</h3>
+        <ul>
+          <li><label class="checkbox"><input type="checkbox" checked><span>Lemons<br><span class="meta">3 · For Mon</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Baby spinach<br><span class="meta">300 g · For Mon, Thu</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Yellow onions<br><span class="meta">4 · For Tue, Wed, Fri</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Potatoes<br><span class="meta">800 g · For Tue</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Cremini mushrooms<br><span class="meta">500 g · For Wed · Amount changed</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Limes<br><span class="meta">2 · For Thu</span></span></label></li>
+        </ul>
+      </section>
+      <section class="group" aria-labelledby="g-dairy">
+        <h3 id="g-dairy">Dairy and eggs</h3>
+        <ul>
+          <li><label class="checkbox"><input type="checkbox" checked><span>Feta<br><span class="meta">150 g · For Mon</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Sour cream<br><span class="meta">1 cup · For Wed</span></span></label></li>
+        </ul>
+      </section>
+      <section class="group" aria-labelledby="g-pantry">
+        <h3 id="g-pantry">Pantry</h3>
+        <ul>
+          <li><label class="checkbox"><input type="checkbox" checked><span>Orzo<br><span class="meta">250 g · For Mon</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Canned chickpeas<br><span class="meta">2 cans · For Mon</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Egg noodles<br><span class="meta">300 g · For Wed</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Black beans<br><span class="meta">2 cans · For Thu</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Corn tortillas<br><span class="meta">8 · For Thu</span></span></label></li>
+        </ul>
+      </section>
+      <section class="group" aria-labelledby="g-meat">
+        <h3 id="g-meat">Meat and fish</h3>
+        <ul>
+          <li><label class="checkbox"><input type="checkbox"><span>Chicken thighs<br><span class="meta">1 kg · For Tue</span></span></label></li>
+          <li><label class="checkbox"><input type="checkbox"><span>Salmon fillets<br><span class="meta">4 · For Fri</span></span></label></li>
+        </ul>
+      </section>
+    </div>
+  </section>
+</main>
+</body>
+</html>

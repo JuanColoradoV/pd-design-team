@@ -1,0 +1,16 @@
+name: Eval result for a model
+description: Share results from running the evals/ suite on a model or runtime.
+labels: [eval-result]
+body:
+  - type: input
+    id: model
+    attributes: { label: Model, version, and runtime }
+    validations: { required: true }
+  - type: input
+    id: commit
+    attributes: { label: Skills commit or release, placeholder: "v2.0.0" }
+    validations: { required: true }
+  - type: textarea
+    id: results
+    attributes: { label: Results, description: "Scenario id → pass/fail, with a short note on each failure (what the agent did instead)." }
+    validations: { required: true }

@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+- **Worked example.** `examples/pantry-meal-planner/`: a full effort produced by running the team on a
+  fictional app, including a coded hi-fi mock built only from tokens and an honest QA report.
+- **Fixes found by running the example:** `plan` added as an artifact discipline; QA sign-off states
+  defined (`pass` / `pass with conditions` / `fail`) and the handoff gate tied to them; the design-system
+  backlog entry now follows the template; the code adapter states its audit table format.
+- **Social preview image** and README hero (`.github/assets/`).
+- **Community files:** code of conduct, security policy, accessibility statement, issue templates (skill
+  behavior, tool adapter, eval result, accessibility barrier), and a pull request template.
+
 ## 2.0.0 — 2026-10-15
 
 First public release.

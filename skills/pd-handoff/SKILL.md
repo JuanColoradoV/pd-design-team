@@ -50,7 +50,8 @@ unstable designs causes rework.
 
 ## Process
 
-1. Confirm readiness: design approved and `pd-ux-qa` passed. If not, stop.
+1. Confirm readiness: design approved and `pd-ux-qa` passed — no open Critical or High findings (or the
+   user explicitly accepted them); Medium and Low may ship as tracked follow-ups. If not, stop.
 2. Pull the requirement from the tracker via `ref:` (`integrations.md`); the spec must satisfy its
    acceptance criteria.
 3. Write the spec with real names. Use a raw value only where no token exists, and flag that as a gap.

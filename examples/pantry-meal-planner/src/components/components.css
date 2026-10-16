@@ -1,0 +1,64 @@
+/* Pantry components (FICTIONAL example system). Tokens only: no raw colors, px, or font names. */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Focus: one shared, always-visible ring */
+:where(a, button, input, [tabindex]):focus-visible {
+  outline: var(--border-width-focus) solid var(--color-focus-ring);
+  outline-offset: var(--space-1);
+}
+
+/* Button: data-kind = primary | secondary | ghost ; data-size = sm | md ;
+   state = :hover, :active, :focus-visible, [disabled], [aria-busy="true"] */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-block-size: var(--size-target-min); padding-inline: var(--space-3);
+  font: var(--role-label-default);
+  border: var(--border-width-thin) solid transparent; border-radius: var(--radius-md);
+  cursor: pointer; text-decoration: none;
+  transition: background-color var(--motion-fast);
+}
+.btn[data-size="md"] { min-block-size: var(--size-target-comfortable); padding-inline: var(--space-4); }
+.btn[data-kind="primary"] { background: var(--color-accent-default); color: var(--color-text-on-accent); }
+.btn[data-kind="primary"]:hover { background: var(--color-accent-hover); }
+.btn[data-kind="primary"]:active { background: var(--color-accent-pressed); }
+.btn[data-kind="secondary"] { background: var(--color-surface-card); color: var(--color-text-primary); border-color: var(--color-border-default); }
+.btn[data-kind="secondary"]:hover { background: var(--color-surface-sunken); }
+.btn[data-kind="ghost"] { background: transparent; color: var(--color-text-accent); border-color: var(--color-border-default); border-style: dashed; }
+.btn[data-kind="ghost"]:hover { background: var(--color-surface-accent-subtle); }
+.btn[disabled], .btn[aria-disabled="true"] { cursor: not-allowed; background: var(--color-surface-sunken); color: var(--color-text-secondary); border-color: var(--color-border-subtle); border-style: solid; }
+.btn[aria-busy="true"] { cursor: progress; }
+
+/* Card: data-padding = md | lg (default md) */
+.card {
+  background: var(--color-surface-card); color: var(--color-text-primary);
+  border: var(--border-width-thin) solid var(--color-border-subtle); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card); padding: var(--space-4);
+}
+.card[data-padding="lg"] { padding: var(--space-5); }
+
+/* Checkbox: native input, restyled size only; label is the hit area */
+.checkbox { display: flex; align-items: center; gap: var(--space-3); min-block-size: var(--size-target-comfortable); cursor: pointer; font: var(--role-body-default); }
+.checkbox input { color: inherit; inline-size: var(--space-5); block-size: var(--space-5); accent-color: var(--color-accent-default); flex: none; margin: 0; }
+.checkbox input:checked + span { color: var(--color-text-secondary); text-decoration: line-through; }
+
+/* Tabs: role=tablist; selected tab = aria-selected="true" */
+.tabs { display: flex; gap: var(--space-1); border-block-end: var(--border-width-thin) solid var(--color-border-subtle); }
+.tab {
+  min-block-size: var(--size-target-comfortable); padding-inline: var(--space-4);
+  font: var(--role-label-default); color: var(--color-text-secondary);
+  background: transparent; border: 0; border-block-end: var(--border-width-focus) solid transparent; cursor: pointer;
+}
+.tab[aria-selected="true"] { color: var(--color-text-primary); border-block-end-color: var(--color-accent-default); }
+.tab:hover { background: var(--color-surface-sunken); }
+
+/* EmptyState: data-tone = neutral | error */
+.empty-state {
+  display: grid; justify-items: start; gap: var(--space-3);
+  padding: var(--space-6); max-inline-size: var(--size-measure);
+  background: var(--color-surface-card); border: var(--border-width-thin) dashed var(--color-border-default); border-radius: var(--radius-lg);
+}
+.empty-state h2, .empty-state h3 { font: var(--role-heading-default); margin: 0; }
+.empty-state p { font: var(--role-body-default); color: var(--color-text-secondary); margin: 0; }
+.empty-state[data-tone="error"] { background: var(--color-status-error-surface); border-style: solid; }
+.empty-state[data-tone="error"] h2, .empty-state[data-tone="error"] h3 { color: var(--color-status-error-text); }
+.empty-state[data-tone="error"] p { color: var(--color-text-primary); }

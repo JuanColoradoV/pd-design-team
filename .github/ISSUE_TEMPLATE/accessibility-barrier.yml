@@ -1,0 +1,12 @@
+name: Accessibility barrier
+description: Something in the repo or in the skills' guidance is inaccessible or wrong.
+labels: [accessibility]
+body:
+  - type: input
+    id: where
+    attributes: { label: Where, placeholder: "README image, skills/pd-foundations/references/accessibility.md, the example mock…" }
+    validations: { required: true }
+  - type: textarea
+    id: barrier
+    attributes: { label: The barrier, description: "What's wrong, who it affects, and the WCAG criterion if you know it. Assistive technology and browser help." }
+    validations: { required: true }

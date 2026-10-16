@@ -51,10 +51,10 @@ parts are flagged for `pd-design-system-ops`.
    `role/label/default`.
 4. **Cover all states** each component needs: default, hover, pressed, focused, disabled, loading, error
    as applicable.
-5. **Handle gaps honestly.** If a part doesn't exist, append a structured entry to
-   `<artifacts_dir>/design-system/SYSTEM-BACKLOG.md`: `date · artifact · element · what's missing · why
-   the system doesn't cover it · closest substitute · severity (Critical/High/Medium/Low, per
-   `compliance.md`) · blocking (yes/no) · reporter`. Use a substitute only when the gap is not blocking;
+5. **Handle gaps honestly.** If a part doesn't exist, append an entry to
+   `<artifacts_dir>/design-system/SYSTEM-BACKLOG.md` using the fields in `templates/SYSTEM-BACKLOG.md`
+   (what was needed, where, why existing parts don't fit, substitution, severity per `compliance.md`,
+   blocking yes/no). Use a substitute only when the gap is not blocking;
    otherwise stop and flag for triage.
 6. **Verify.** Confirm every name exists in the live source, and that the exact property combination
    (example: `kind=danger, size=xs`) is a built variant, not just individually valid values. Confirm the

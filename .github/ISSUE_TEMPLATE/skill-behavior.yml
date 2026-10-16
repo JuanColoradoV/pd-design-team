@@ -1,0 +1,29 @@
+name: Skill behaved wrong
+description: A skill gave bad guidance, broke the contract, or a model didn't follow it.
+labels: [skill-behavior]
+body:
+  - type: input
+    id: skill
+    attributes: { label: Skill, placeholder: "pd-ux-qa" }
+    validations: { required: true }
+  - type: input
+    id: runtime
+    attributes: { label: Model and runtime, placeholder: "Claude Code + Claude Opus 5.5 / Codex + gpt-6.1-sol / Gemini CLI / Cursor" }
+    validations: { required: true }
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Design tool in use
+      options: [Figma, Pencil, Penpot, Sketch, Framer, Code-based system, None, Other]
+  - type: textarea
+    id: prompt
+    attributes: { label: What you asked, description: The prompt, and the relevant part of PROJECT.md if you use one. }
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: What you expected }
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes: { label: What happened instead, description: Quote the agent's output or the artifact it wrote. Remove anything private. }
+    validations: { required: true }

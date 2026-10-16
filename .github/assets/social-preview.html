@@ -1,0 +1,59 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+:root{--paper:#F3EFE6;--ink:#16140F;--muted:#6B655A;--line:#D8D1C3;--accent:#E8461E;--chip:#FBF9F4}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:640px;overflow:hidden}
+body{background:var(--paper);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;position:relative;
+ background-image:radial-gradient(circle,#CFC7B6 1px,transparent 1.2px);background-size:24px 24px;background-position:12px 12px}
+.wrap{position:absolute;inset:0;padding:56px 64px;display:grid;grid-template-columns:584px 1fr;gap:28px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:15px;letter-spacing:.04em;color:var(--muted);display:flex;gap:10px;align-items:center}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
+h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:96px;line-height:.95;letter-spacing:-.015em;margin-top:28px}
+h1 em{color:var(--accent);font-style:italic}
+.sub{font-size:23px;line-height:1.38;color:#3A362E;margin-top:26px;max-width:540px}
+.sub b{font-weight:600;color:var(--ink)}
+.name{position:absolute;left:64px;bottom:52px;font-family:"IBM Plex Mono",monospace;font-size:17px;font-weight:500}
+.name span{color:var(--muted);font-weight:400}
+/* artboard */
+.board{position:relative;background:var(--chip);border:1.5px solid var(--ink);border-radius:14px;margin-top:6px;height:456px;
+ box-shadow:8px 8px 0 var(--ink);padding:26px 26px 22px}
+.board .tab{position:absolute;top:-13px;left:22px;background:var(--paper);border:1.5px solid var(--ink);border-radius:999px;
+ font-family:"IBM Plex Mono",monospace;font-size:12.5px;padding:3px 11px}
+.lead{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);border-radius:8px;padding:9px 14px;
+ font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:500}
+.lead i{width:8px;height:8px;border-radius:50%;background:var(--accent);display:block}
+.row{display:flex;flex-wrap:nowrap;gap:7px;margin-top:14px;position:relative}
+.label{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);margin-top:26px;letter-spacing:.05em;text-transform:uppercase}
+.c{font-family:"IBM Plex Mono",monospace;font-size:13px;border:1.3px solid var(--ink);border-radius:7px;padding:6px 9px;background:#fff}
+.c.hot{border-color:var(--accent);color:var(--accent)}
+.arrow{color:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:14px;align-self:center}
+.tools{position:absolute;left:26px;right:26px;bottom:20px;border-top:1.3px dashed var(--line);padding-top:13px;
+ font-size:14.5px;color:#3A362E;display:grid;grid-template-columns:62px 1fr;row-gap:5px}
+.tools .k{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;padding-top:2px}
+.side{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin-top:10px}
+.tools b{font-weight:600;color:var(--ink)}
+</style></head><body>
+<div class="wrap">
+ <div>
+  <div class="eyebrow"><span class="dot"></span>open source · agent skills · v2.0</div>
+  <h1>A design team<br>for your <em>AI agent.</em></h1>
+  <p class="sub"><b>16 skills</b>, from research to developer handoff, that bind to your real design system, say what they couldn't check, and learn from each project.</p>
+ </div>
+ <div class="board">
+  <span class="tab">docs/design/</span>
+  <span class="lead"><i></i>pd-design-lead</span>
+  <div class="side">+ foundations (shared contract) · system-ops (side loop)</div>
+  <div class="label">discover &amp; structure</div>
+  <div class="row"><span class="c">research</span><span class="arrow">→</span><span class="c">architecture</span><span class="arrow">→</span><span class="c">flows</span></div>
+  <div class="label">design</div>
+  <div class="row"><span class="c hot">ux-design</span><span class="c">writing</span><span class="c">visual</span><span class="c">design-system</span><span class="c">responsive</span></div>
+  <div class="label">build &amp; ship</div>
+  <div class="row"><span class="c">mocks</span><span class="c">prototyping</span><span class="c hot">qa</span><span class="c">handoff</span><span class="c">metrics</span></div>
+  <div class="tools"><span class="k">tools</span><span>Figma · Pencil · Penpot · Sketch · Framer · code · none</span><span class="k">agents</span><span>Claude Code · Codex · Gemini CLI · Cursor</span></div>
+ </div>
+</div>
+<div class="name">github.com/JuanColoradoV/<span>pd-design-team</span></div>
+</body></html>

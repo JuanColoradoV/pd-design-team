@@ -49,8 +49,8 @@ right while bindings are wrong. For each:
 - Text does not clip or overflow at narrow widths and long-content cases.
 - All states render, with realistic content.
 
-Report findings in the same table format as `tools/figma.md`, with severity from `compliance.md`, and
-fix before the next batch.
+Report findings in one table — `Screen | Issue type | Detail | Severity` (severity from `compliance.md`)
+— and fix before the next batch.
 
 ### Render checks
 

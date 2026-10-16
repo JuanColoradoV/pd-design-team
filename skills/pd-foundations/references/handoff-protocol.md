@@ -32,8 +32,8 @@ in these files that show `docs/design/` mean that default; substitute the projec
 `<artifacts_dir>/<YYYY-MM-DD>-<discipline>-<topic>.md`
 
 `discipline` is one of `research · architecture · flows · design · content · visual · components · mocks ·
-qa · prototype · responsive · handoff · metrics`. Use the same `topic` slug across one effort so the
-chain is easy to follow.
+qa · prototype · responsive · handoff · metrics`, plus `plan` for the lead's plan of an effort. Use the
+same `topic` slug across one effort so the chain is easy to follow.
 
 To find an artifact, match `<artifacts_dir>/*-<discipline>-*.md` (for example `*-design-*.md`). Resolve
 the exact path through `INDEX.md` and the topic slug when an index exists: the row names the file and

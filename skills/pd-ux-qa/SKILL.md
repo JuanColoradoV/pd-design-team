@@ -86,7 +86,8 @@ summary listing what was tested and what was not, for example "No failures found
 screens (automated scan, keyboard and contrast pass); screen reader tested on one pairing only; criteria
 not tested: captions, time limits; regulatory pillar not run (none active)". Say "conforms to WCAG 2.2
 AA" only after a complete, evidenced evaluation of the stated scope. End with a
-sign-off status. Scope every claim to what was tested; avoid "fully accessible" or "compliant", and
+sign-off status: `pass` (no open findings above Low), `pass with conditions` (no open Critical or
+High; Medium and Low tracked as follow-ups), or `fail`. Scope every claim to what was tested; avoid "fully accessible" or "compliant", and
 flag uncertainty (`working-agreement.md`).
 
 ## Domain packs

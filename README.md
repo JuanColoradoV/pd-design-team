@@ -1,5 +1,7 @@
 # pd-design-team
 
+![pd-design-team — a design team for your AI agent](.github/assets/social-preview.png)
+
 **[English](#english) · [Español](#español)**
 
 <a id="english"></a>
@@ -39,6 +41,16 @@ you ──▶ pd-design-lead ──▶ picks the smallest set of specialists for
 - An agent that loads Agent Skills: Claude Code, Codex, Gemini CLI / Antigravity, or Cursor.
 - Optional: a connection (MCP server) to your design tool, tracker, or analytics. Without one, the team
   works from files, screenshots, and exports, and tells you which checks it couldn't run.
+
+## See it work
+
+[`examples/pantry-meal-planner`](examples/pantry-meal-planner/) is a complete effort produced by
+running the team with an AI agent on a fictional recipe app: the plan, research framed honestly as
+assumptions (no invented data), flows, screen specs with every state, copy, visual and component
+mapping, a coded hi-fi mock built only from design tokens, a QA report with real findings, the
+developer handoff, and the retro's learnings.
+
+![Coded mock of the Pantry week planner, produced by pd-mocks](.github/assets/example-mock.png)
 
 ## Why it's different
 
@@ -162,7 +174,8 @@ scripts/             validate.py · install.sh · package.sh
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). In short: keep skills generic (project data belongs in the
+See [CONTRIBUTING.md](CONTRIBUTING.md), the [code of conduct](CODE_OF_CONDUCT.md), the
+[security policy](SECURITY.md), and the [accessibility statement](ACCESSIBILITY.md). In short: keep skills generic (project data belongs in the
 project's `PROJECT.md`), run `python3 scripts/validate.py`, and add or update an eval scenario for any
 behavior you change.
 
@@ -217,6 +230,14 @@ Figma, código, Pencil y el modo sin herramienta están probados en la práctica
 verificada y la escritura sale de la documentación oficial). Los adaptadores de Penpot, Sketch y Framer
 salen de la documentación: dibujar directo en el canvas necesita un MCP de esa herramienta y, si no lo
 hay, el equipo cae a código o a specs. Agregar una herramienta es copiar `tools/_template.md`.
+
+### Míralo funcionando
+
+[`examples/pantry-meal-planner`](examples/pantry-meal-planner/) es un trabajo completo hecho por el
+equipo con un agente de IA, sobre una app de recetas ficticia: el plan, la investigación planteada con
+honestidad como supuestos (sin datos inventados), flujos, specs de pantallas con todos sus estados,
+textos, mapeo visual y de componentes, un mock de alta fidelidad en código hecho solo con tokens, un
+reporte de QA con hallazgos reales, el handoff para desarrollo y las lecciones de la retro.
 
 ### Qué lo hace distinto
 
@@ -285,7 +306,8 @@ del producto en los idiomas que declare `PROJECT.md`.
 
 ### Contribuir
 
-Lee [CONTRIBUTING.md](CONTRIBUTING.md). En resumen: mantén las skills genéricas (los datos de cada
+Lee [CONTRIBUTING.md](CONTRIBUTING.md), el [código de conducta](CODE_OF_CONDUCT.md), la
+[política de seguridad](SECURITY.md) y la [declaración de accesibilidad](ACCESSIBILITY.md). En resumen: mantén las skills genéricas (los datos de cada
 proyecto van en su `PROJECT.md`), corre `python3 scripts/validate.py` y agrega o actualiza un escenario
 de evaluación para cualquier comportamiento que cambies.
 
