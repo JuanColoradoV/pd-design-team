@@ -1,0 +1,16 @@
+{
+  "name": "pd-design-team",
+  "owner": { "name": "Juan Colorado", "url": "https://github.com/JuanColoradoV" },
+  "metadata": {
+    "description": "A product-design team for AI agents: a lead, a shared contract, and 14 specialist skills.",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "pd-design-team",
+      "source": "./",
+      "description": "A product-design team for AI agents: 16 skills that bind to your real design system and work with any UI/UX tool.",
+      "version": "2.0.0"
+    }
+  ]
+}

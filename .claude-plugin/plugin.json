@@ -1,0 +1,10 @@
+{
+  "name": "pd-design-team",
+  "version": "2.0.0",
+  "description": "A product-design team for AI agents: a lead, a shared contract, and 14 specialist skills (research, IA, flows, UI, copy, visual, design systems, mocks, prototyping, responsive, QA, handoff, metrics) that bind to your real design system and work with Figma, Pencil, Penpot, Sketch, Framer, or code.",
+  "author": { "name": "Juan Colorado", "url": "https://github.com/JuanColoradoV" },
+  "homepage": "https://github.com/JuanColoradoV/pd-design-team",
+  "repository": "https://github.com/JuanColoradoV/pd-design-team",
+  "license": "MIT",
+  "keywords": ["design", "ux", "ui", "product-design", "design-system", "accessibility", "skills"]
+}

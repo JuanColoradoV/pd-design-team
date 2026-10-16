@@ -1,0 +1,54 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate skills, references, manifests, leaks
+        run: python3 scripts/validate.py --strict
+
+  scripts:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]   # macOS runs the system bash 3.2
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install, reinstall, uninstall (symlink)
+        run: |
+          set -eu
+          d="$RUNNER_TEMP/skills"; export PD_BACKUP_DIR="$RUNNER_TEMP/backups"
+          mkdir -p "$d/pd-ux-design" "$RUNNER_TEMP/elsewhere"
+          echo existing > "$d/pd-ux-design/SKILL.md"           # foreign folder → must be backed up
+          /bin/bash scripts/install.sh --dir "$d"
+          test -L "$d/pd-foundations"
+          test -f "$PD_BACKUP_DIR"/*/*/pd-ux-design/SKILL.md
+          /bin/bash scripts/install.sh --dir "$d"                 # idempotent
+          rm "$d/pd-metrics" && ln -s "$RUNNER_TEMP/elsewhere" "$d/pd-metrics"   # foreign link
+          /bin/bash scripts/install.sh --uninstall --dir "$d"
+          test -L "$d/pd-metrics"                                 # left alone
+          test ! -e "$d/pd-foundations"
+          if /bin/bash scripts/install.sh --dir skills; then echo "installed into the repo itself" >&2; exit 1; fi
+          test -f skills/pd-foundations/SKILL.md                  # source untouched
+      - name: Install and uninstall (copy)
+        run: |
+          set -eu
+          d="$RUNNER_TEMP/copied"
+          /bin/bash scripts/install.sh --copy --dir "$d"
+          test -f "$d/pd-foundations/SKILL.md" && test -f "$d/pd-foundations/LICENSE"
+          /bin/bash scripts/install.sh --uninstall --dir "$d"
+          test -z "$(ls -A "$d")"
+      - name: Package
+        run: |
+          set -eu
+          bash scripts/package.sh
+          test -f dist/pd-design-team.zip
+          unzip -l dist/pd-mocks.zip | grep -q "pd-mocks/LICENSE"
