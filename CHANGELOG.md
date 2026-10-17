@@ -10,6 +10,7 @@
 - **README visuals** ("Design with receipts"): hero and social preview, team route, every-state, and worked
   example images, plus a new plugin icon. Every number on them comes from the example's artifacts. Sources and
   `render.sh` live in `.github/assets/src/`.
+- **Demo GIF:** a real, labeled session of `pd-design-lead` planning a feature (`.github/assets/demo.gif`).
 - **Community files:** code of conduct, security policy, accessibility statement, issue templates (skill
   behavior, tool adapter, eval result, accessibility barrier), and a pull request template.
 

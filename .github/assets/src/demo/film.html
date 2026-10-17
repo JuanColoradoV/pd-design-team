@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../brand.css">
+<style>
+html,body{width:1280px;height:920px}
+body.t{background:transparent!important;background-image:none!important}
+.L{display:none}
+.top{position:absolute;left:48px;right:48px;top:26px;display:flex;justify-content:space-between;font:400 19px "JetBrains Mono";color:var(--dim)}
+.top b{color:var(--ink);font-weight:800}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--sig);margin-right:10px;vertical-align:1px}
+.term{position:absolute;left:48px;top:104px;width:1184px;height:758px;background:#0C0C0A}
+.sel.tf{left:40px;top:96px;width:1200px;height:774px}
+.url{position:absolute;left:48px;right:48px;bottom:22px;display:flex;justify-content:space-between;font:400 18px "JetBrains Mono";color:var(--dim)}
+.url b{color:var(--ink);font-weight:600}
+.badge{position:absolute;right:48px;top:58px;font:800 17px "JetBrains Mono";padding:5px 11px;border-radius:6px;letter-spacing:.04em}
+.b-rt{background:var(--ok);color:#0B0B09}.b-x{background:var(--sig);color:#0B0B09}.b-p{background:var(--ink);color:#0B0B09}
+/* cards */
+.card{position:absolute;inset:0}
+.big{position:absolute;left:56px;top:290px;font-size:150px}
+.cap{position:absolute;left:60px;top:660px;font:400 28px "JetBrains Mono";color:var(--dim)}
+.cap b{color:var(--ink);font-weight:600}
+.out-h{position:absolute;left:56px;top:230px;width:640px;font-size:76px;letter-spacing:-.03em;line-height:1}
+.out-p{position:absolute;left:58px;top:590px;width:620px;font:400 26px/1.45 "Bricolage Grotesque";color:var(--dim)}
+.out-p b{color:var(--ink);font-weight:600}
+.receipt{left:760px;top:190px;width:472px;padding:30px 32px 46px;font-size:19.5px;line-height:1.6}
+.receipt .t{font-weight:800;font-size:23px;letter-spacing:.06em}
+.receipt .s{color:#6D685C;font-size:16px}
+.receipt .bigr{font-weight:800;font-size:23px;letter-spacing:.02em}
+</style></head><body>
+<!-- bg: frame around the terminal -->
+<div class="L bg">
+ <div class="top"><div><span class="dot"></span><b>pd-design-team</b> · one brief, one real session</div></div>
+ <div class="term"></div>
+ <div class="sel tf"><span class="h tl"></span><span class="h tr"></span><span class="h bl"></span><span class="h br"></span>
+  <div class="name"><b>FRAME</b>Claude Code · Sonnet 5.5 · unedited output</div></div>
+ <div class="url"><div>github.com/JuanColoradoV/<b>pd-design-team</b></div><div>MIT · 16 skills</div></div>
+</div>
+<div class="L b1"><div class="badge b-rt">● REAL TIME</div></div>
+<div class="L b6"><div class="badge b-x">▶▶ ×6 · READING THE SKILLS</div></div>
+<div class="L bp"><div class="badge b-p">❚❚ PAUSED TO READ</div></div>
+<div class="L b15"><div class="badge b-x">▶ ×1.5</div></div>
+<!-- intro -->
+<div class="L intro card">
+ <div class="top"><div><span class="dot"></span><b>pd-design-team</b> · 16 agent skills</div><div>open source · MIT</div></div>
+ <div class="big display">Design with<br><span class="sig">receipts.</span></div>
+ <div class="cap">A real session. The brief: <b>"let people pause a habit."</b></div>
+</div>
+<!-- outro -->
+<div class="L outro card">
+ <div class="top"><div><span class="dot"></span><b>pd-design-team</b> · 16 agent skills</div><div>open source · MIT</div></div>
+ <div class="out-h display">It planned.<br>It said what it<br>couldn't check.<br><span class="sig">It waited.</span></div>
+ <div class="out-p">No files touched before your OK. <b>github.com/JuanColoradoV/pd-design-team</b></div>
+ <div class="receipt" id="rc">
+  <div class="t">SESSION RECEIPT</div>
+  <div class="s">pd-design-lead · pause a habit</div>
+  <hr>
+  <div class="row"><span>specialists planned</span><span class="chk">9</span></div>
+  <div class="row"><span>skipped, with reasons</span><span>4</span></div>
+  <div class="row"><span>questions before starting</span><span>4</span></div>
+  <div class="row"><span>files written</span><span class="chk">0</span></div>
+  <hr>
+  <div class="s" style="color:#151512;font-weight:800">CAN'T CHECK THIS SESSION</div>
+  <div class="nt" style="font-size:18px">browser render · real contrast</div>
+  <hr>
+  <div class="bigr">WAITING FOR YOUR OK</div>
+ </div>
+</div>
+<script>
+const q=new URLSearchParams(location.search), m=q.get('m');
+if(q.get('t'))document.body.classList.add('t');
+document.querySelectorAll('.L.'+m).forEach(e=>e.style.display='block');
+if(m==='outro'){const k=+q.get('k'),n=+q.get('n');const r=document.getElementById('rc');
+ if(k<n){const b=r.getBoundingClientRect(); r.style.clipPath=`inset(0 0 ${b.height*(1-k/n)}px 0)`;
+  r.style.webkitMask='none'}}
+</script>
+</body></html>

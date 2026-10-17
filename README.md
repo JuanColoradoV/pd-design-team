@@ -2,6 +2,8 @@
 
 ![pd-design-team: design with receipts. A design team for your AI agent, shown next to a QA receipt from the worked example](.github/assets/hero.png)
 
+![A real Claude Code session: pd-design-lead reads the brief, plans the smallest team, lists the checks it can't run this session, asks four questions, and waits for an OK before writing any file](.github/assets/demo.gif)
+
 **[English](#english) · [Español](#español)**
 
 <a id="english"></a>
