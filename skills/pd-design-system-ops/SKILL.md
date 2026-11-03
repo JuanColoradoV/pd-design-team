@@ -7,7 +7,7 @@ description: >-
 metadata:
   team: product-design
   role: design-system-steward
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # pd-design-system-ops — grow and guard the living system

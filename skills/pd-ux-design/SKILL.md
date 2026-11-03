@@ -8,7 +8,7 @@ description: >-
 metadata:
   team: product-design
   role: ux-design
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # pd-ux-design — screens that realize the flow

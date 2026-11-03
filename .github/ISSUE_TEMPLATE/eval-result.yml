@@ -8,7 +8,7 @@ body:
     validations: { required: true }
   - type: input
     id: commit
-    attributes: { label: Skills commit or release, placeholder: "v2.0.0" }
+    attributes: { label: Skills commit or release, placeholder: "v2.1.0" }
     validations: { required: true }
   - type: textarea
     id: results

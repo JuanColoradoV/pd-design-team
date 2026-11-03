@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 2.1.0 — 2026-11-03
 
 - **Worked example.** `examples/pantry-meal-planner/`: a full effort produced by running the team on a
   fictional app, including a coded hi-fi mock built only from tokens and an honest QA report.

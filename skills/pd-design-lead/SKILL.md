@@ -7,7 +7,7 @@ description: >-
 metadata:
   team: product-design
   role: orchestrator
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # pd-design-lead — the design team's orchestrator

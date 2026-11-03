@@ -8,7 +8,7 @@ description: >-
 metadata:
   team: product-design
   role: metrics
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # pd-metrics — define success, then measure it
