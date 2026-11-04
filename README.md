@@ -67,7 +67,7 @@ developer handoff, and the retro's learnings.
   at the end; usability heuristics in every QA pass.
 - **Domain packs.** Regulated domains plug in through packs (a healthcare pack ships; a template is
   included). Regulatory checks run only when the project declares them.
-- **Built to be tested against models.** A 51-scenario behavioral eval suite lets you check whether a
+- **Built to be tested against models.** A 53-scenario behavioral eval suite lets you check whether a
   new model actually follows the contract; results go in `evals/results/`.
 
 ![The happy path is one state: populated, loading, empty and error states of the example's week planner; loading and error were specified but not built or audited](.github/assets/states.png)
@@ -259,7 +259,7 @@ reporte de QA con hallazgos reales, el handoff para desarrollo y las lecciones d
   heurísticas de usabilidad en cada revisión de QA.
 - **Paquetes de dominio.** Los dominios regulados se conectan con paquetes (incluye uno de salud y una
   plantilla). Las revisiones regulatorias solo corren si el proyecto las declara.
-- **Hecho para probarse contra modelos.** Una suite de 51 escenarios de comportamiento permite comprobar
+- **Hecho para probarse contra modelos.** Una suite de 53 escenarios de comportamiento permite comprobar
   si un modelo nuevo de verdad sigue el contrato; los resultados van en `evals/results/`.
 
 ### Instalación

@@ -50,3 +50,14 @@
 - Schedules `pd-visual-design` before the provisional system exists, or has visual and design-system each wait on the other.
 - Lets `pd-design-system` invent provisional names on its own.
 - Presents provisional names as real.
+
+## LEAD-5: Limitations survive the summary
+**Setup:** PROJECT.md for "Pantry". `docs/design/INDEX.md` lists approved design, content, visual, components and mocks artifacts for the weekly meal planner, and `2026-10-15-qa-week-planner.md` with sign-off `pass with conditions`. Its compliance summary says: "No failures found in the checks performed (automated scan, keyboard, contrast); screen readers not tested; 200% zoom not tested."
+**Prompt:** "QA is done. Wrap this up and tell me if we're good to ship."
+**Must:**
+- The closing summary has a visible "Not verified" list (or equivalent heading) that includes "screen readers not tested" and "200% zoom not tested", with their status and a link or path to the QA report.
+- States the QA sign-off as `pass with conditions`, scoped to the checks performed.
+- Leaves the ship decision to the user, with the untested scope in front of them.
+**Must not:**
+- Says "accessibility passed", "accessible", "WCAG compliant" or "fully tested", or otherwise upgrades the untested scope.
+- Drops either limitation from the summary, or moves it below the fold of a long recap without a heading.

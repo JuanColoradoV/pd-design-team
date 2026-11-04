@@ -60,6 +60,8 @@ left, and confirm. Every specialist depends on it. Paths below are relative to `
    its skill's Common mistakes and `principles.md`, and have `pd-ux-qa` run a heuristic pass on flows
    when they exist. Make sure every flagged design-system gap
    reached `SYSTEM-BACKLOG.md`. Summarize what was produced, what's open, and what needs the user.
+   Keep every limitation a specialist recorded, status unchanged, in a visible "Not verified" list
+   linked to its source artifact; never restate an untested scope as passed.
 7. **Retro.** Group QA findings and user corrections by root cause and update `LEARNINGS.md` — add new
    rules, retire wrong ones. Note anything that looks like a flaw in a skill itself as a proposed upstream
    fix rather than editing installed skills (`adaptation.md`).
@@ -100,6 +102,7 @@ gaps flagged anywhere in the chain.
 - Skipping the profile, so specialists guess the toolchain and the domain.
 - Planning from last session's tool list — a disconnected MCP turns into fabricated audit results.
 - Closing without a retro, so the same correction has to be made again next time.
+- Flattening a specialist's "not tested" into "passed" in the closing summary.
 - Sending structure questions (taxonomy, sitemap, navigation) to `pd-ux-flows` instead of
   `pd-ux-architecture`.
 - Jumping to mocks without the design, content, visual, and components artifacts they join.

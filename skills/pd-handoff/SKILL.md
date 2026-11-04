@@ -67,7 +67,15 @@ unstable designs causes rework.
 
 `<artifacts_dir>/<date>-handoff-<topic>.md` with the artifact header (`ref:` the requirement) and a spec
 **version number**. Contents: spec, asset list, token/component-to-code mappings, accessibility and
-responsive notes, compliance acceptance status (scoped to what QA tested), open questions. If the spec
+responsive notes, compliance acceptance status (scoped to what QA tested), a **Not verified** section,
+open questions.
+
+The **Not verified** section is required, even when it says "none". It lists every check an upstream
+specialist recorded as not run, not tested, or unverified (for example "screen readers not tested"),
+each with its status, the artifact and section it came from, and a link to the QA report. Carry the
+status and the missing check over unchanged; quote the specialist's wording where you can. Never
+upgrade an untested scope to `passed` or fold it into a general "accessibility passed" line: a
+limitation is only useful if the person deciding to ship still sees it. If the spec
 changes after engineering has started, write a new dated handoff file with the spec version bumped
 and what changed listed, and mark the old one `superseded`: silent edits break the build in flight. A
 draft that engineering hasn't seen may be edited in place. `upstream:` design, content, visual,
@@ -88,3 +96,4 @@ skill.
 - Assets not exported; code mappings guessed.
 - Handing off before QA passes, or with no `ref:` link to the requirement.
 - Editing a spec in place after build started, with no version bump.
+- Summarizing an untested check as passed, or dropping it, instead of listing it under Not verified.

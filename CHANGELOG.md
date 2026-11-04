@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- **Not verified travels to the end.** `pd-handoff` now requires a Not verified section, and
+  `pd-design-lead` keeps every recorded limitation in its closing summary, with status unchanged and a
+  link to the QA report. Neither may upgrade an untested scope to passed. New evals: LEAD-5 and HAND-3
+  (53 scenarios). Idea and eval design from Bashar Louzon.
+
 ## 2.1.0 — 2026-11-03
 
 - **Worked example.** `examples/pantry-meal-planner/`: a full effort produced by running the team on a
